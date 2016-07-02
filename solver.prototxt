@@ -1,0 +1,48 @@
+net: "/home/deep/rahim/FinetuneVGG-Eyediap/16Layer/scenario2/vgg-eyediap.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 50 test iterations,covering the full 4458 testing images.
+test_iter: 250
+
+# Carry out testing every 500 training iterations.
+test_interval: 500
+
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+#momentum: 0.9
+#weight_decay: 0.0005
+
+lr_policy: "step"
+gamma: 0.0001
+#power: 0.75
+
+stepsize: 1000
+
+# Display every 50 iterations
+display: 50
+max_iter: 1000
+
+snapshot: 1000
+snapshot_prefix: "/home/deep/rahim/FinetuneVGG-Eyediap/16Layer/scenario2/vgg-eyediap_snapshot"
+solver_mode: GPU
+
+
+
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+#test_iter: 100
+
+#test_interval: 500
+
+#base_lr: 0.01
+#momentum: 0.9
+#weight_decay: 0.0005
+
+#lr_policy: "inv"
+#gamma: 0.0001
+#power: 0.75
+
+#display: 100
+
+#max_iter: 10000
+
+#solver_mode: GPU
